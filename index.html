@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/1-5/个人博客/BLOG/css.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      @font-face {
+        font-family: "one";
+        src: url(../BLOG/font/Pacifico-Regular.ttf);
+      }
+      @font-face {
+        font-family: "two";
+        src: url(../BLOG/font/Ubuntu-Regular.ttf);
+      }
+     
+      body{
+        display: flex;
+        color: #eeeeee;
+        width: 100%;
+       
+      }
+     
+    .all{
+        position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh; /* 视口高度 */
+       
+       background-image: url(../BLOG/img/background.jpg);
+       background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* 模糊效果 */
+            z-index: -1; /* 确保这个层在内容之下 */
+    }
+      .tx-1 {
+        width: 150px; /* 设置头像的宽度 */
+        height: 150px; /* 设置头像的高度，确保它是正方形 */
+        border-radius: 50%; /* 将图像设置为圆形 */
+        border: 3px solid #fff; /* 添加白色边框，你也可以使用其他颜色 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加一些阴影效果 */
+        object-fit: cover; /* 确保图像填充整个容器而不失真 */
+        transition: transform 0.5s ease;
+      }
+      .tx-1:hover{
+        transform:rotate(90deg);
+      }
+      .main {
+        margin-top: 20px;
+        z-index: 1;
+        display: flex;
+       margin: 0 auto;
+        max-width: 1150px;
+        position: relative;
+      }
+      .main-left {
+        display: flex;
+        width: 230px;
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        padding: 0 15px;
+        position: sticky;
+        margin-right: 10px;
+      }
+      .weclome {
+        font-size: 65px;
+        font-weight: 800;
+        margin: 20px 0;
+      }
+      .left-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .left-div {
+        flex-shrink: 0;
+        width: 100%;
+        border-radius: 13px;
+        margin-top: 15px;
+        padding: 20px;
+        background-color: #00000038;
+      }
+      .DZL {
+        font-family: "one";
+      }
+      .left-2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 14px;
+      }
+      .left-2-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 28px;
+        margin: 0px 5px 5px 0;
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 10px;
+        background-color: #00000038;
+      }
+      .text {
+        font-size: 20px;
+        margin-top: 7px;
+      }
+      .right-2 {
+        width: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .right-2-item {
+        width: 60px;
+        height: 50px;
+        box-sizing: border-box;
+        border-radius: 7px;
+        display: flex;
+        margin-left: 20px;
+        background: #00000038;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        text-decoration: none;
+      }
+      .blog-post {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        display: flex;
+      }
+      .post-meta {
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 10px;
+      }
+      .post-image img {
+        margin: 0 auto;
+        border-radius: 5px;
+      }
+      .post-content {
+        text-align: justify;
+      }
+      .post-extras {
+        margin-top: 20px;
+      }
+      .post-extras h2 {
+        margin-top: 0;
+      }
+      .post-extras ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .post-extras li {
+        margin-bottom: 10px;
+      }
+      .post-extras a {
+        text-decoration: none;
+        color: #007bff;
+      }
+      .post-extras a:hover {
+        text-decoration: underline;
+      }
+      @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+      .zjl {
+        border-radius: 50%;
+        border: 3px solid #fff; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        object-fit: cover; 
+        animation: spin 5s linear infinite;
+      }
+      .li-box {
+        display: flex;
+        align-items: center;
+      }
+      .right-2-item:hover {
+        text-decoration: underline;
+      }
+      .span-text{
+        color:#ddd;
+      }
+    </style>
+  </head>
+    <div class="all"></div>
+    <div class="main">
+      <div class="main-left">
+        <div class="tx">
+          <img class="tx-1" src="../BLOG/img/头像.jpg" alt="" />
+        </div>
+        <div class="left-1 left-div">
+          <div>Num: 223020115</div>
+          <div>College: 成都锦城学院</div>
+        </div>
+        <div class="left-div left-2">
+          <div class="left-2-item">网瘾</div>
+          <div class="left-2-item">大学生</div>
+          <div class="left-2-item">大三</div>
+          <div class="left-2-item">音乐</div>
+          <div class="left-2-item">游戏</div>
+          <div class="left-2-item">健身</div>
+          <div class="left-2-item">学习</div>
+          <div class="left-2-item">进步</div>
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="weclome">
+          Hello I'm
+          <span class="DZL">Dai Zhilong</span>
+        </div>
+        <div class="text">
+          <div>👦 Never say die.</div>
+          <div>📝 Never put off what you can do today until tomorrow.</div>
+        </div>
+        <div class="right-2">
+          <a class="right-2-item" href="https://github.com/dashboard">
+            <span class="span-text">GitHub</span>
+          </a>
+          <a
+            class="right-2-item"
+            href="https://y.qq.com/n/ryqq/profile/like/song"
+          >
+            <span class="span-text">QQ音乐</span>
+          </a>
+          <a
+            class="right-2-item"
+            href="https://www.luogu.com.cn/user/1358935#main"
+          >
+            <span class="span-text">洛谷</span>
+          </a>
+          <a
+            class="right-2-item"
+            href="https://id.163.com/mail/index.html#/email"
+          >
+            <span class="span-text">邮箱</span>
+          </a>
+        </div>
+        <h1>喜欢的歌手</h1>
+        <div class="right-3">
+          <div class="post-image">
+            <img
+              src="../BLOG/img/R-C.jpg"
+              alt="周杰伦"
+              width="250"
+              height="250"
+            />
+            <img
+              src="../BLOG/img/20160516002734_AN3HX.thumb.1000_0.jpeg"
+              alt="周杰伦"
+              width="250"
+              height="250"
+            />
+            <img
+              src="../BLOG/img/20210619063044_565f3.jpeg"
+              alt="周杰伦"
+              width="250"
+              height="250"
+            />
+          </div>
+
+          <div class="post-content">
+            <p>
+              周杰伦，这位在华语乐坛留下深刻印记的音乐才子，以其独特的音乐风格和非凡的创作才华，成为了无数乐迷心中的偶像。
+            </p>
+
+            <p>
+              从《青花瓷》的古典韵味，到《双截棍》的嘻哈风格，周杰伦的音乐作品总是能够跨越不同的音乐类型，触动人们的心灵。
+            </p>
+
+            <p>
+              不仅如此，周杰伦还涉足影视领域，出演了多部电影和电视剧，展现了他在表演方面的天赋。
+            </p>
+
+            <p>
+              总之，周杰伦以其多才多艺和不懈努力，成为了华语乐坛的传奇人物，值得我们每一个人去学习和敬仰。
+            </p>
+          </div>
+          <div class="post-extras">
+            <h2>推荐歌曲</h2>
+            <ul>
+              <li>
+                <div class="li-box">
+                  <img
+                    class="zjl"
+                    src="../BLOG/img/晴天.webp"
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                  <a href="https://y.qq.com/n/ryqq/songDetail/0039MnYb0qxYhV"
+                    > 晴天</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="li-box">
+                  <img
+                    class="zjl"
+                    src="../BLOG/img/七里香.webp"
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                  <a href="https://y.qq.com/n/ryqq/songDetail/004Z8Ihr0JIu5s"
+                    > 七里香</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="li-box">
+                  <img
+                    class="zjl"
+                    src="../BLOG/img/3.webp"
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                  <a href="https://y.qq.com/n/ryqq/songDetail/0022b7OX2STU86"
+                    > 我落泪情绪零碎</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+  </body>
+</html>
